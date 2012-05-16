@@ -136,7 +136,7 @@ public abstract class PainterBase {
     }
 
     public void paint(final Graphics g, final int x, final int y) {
-        synchronized (this.bufferedImage) {
+        synchronized (this) {
             g.drawImage(this.bufferedImage, x, y, null);
         }
     }
@@ -150,7 +150,7 @@ public abstract class PainterBase {
     }
 
     public void setSize(int width, int height) {
-        synchronized (this.bufferedImage) {
+        synchronized (this) {
             this.bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
             clear(getGraphics());
             disposeGraphics();

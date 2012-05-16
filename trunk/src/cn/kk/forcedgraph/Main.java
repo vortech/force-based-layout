@@ -248,7 +248,7 @@ public class Main extends JFrame implements NodeSelectedListener, GraphFinishedL
                     lblCounter.setText("（顶点数目：" + nodes.size() + "）");
                 }
             }
-        }).run();
+        }).start();
     }
 
     @Override
@@ -274,7 +274,7 @@ public class Main extends JFrame implements NodeSelectedListener, GraphFinishedL
                     lblCounter.setText("（顶点数目：" + nodes.size() + "）");
                 }
             }
-        }).run();
+        }).start();
     }
 
     public void reset() {
