@@ -108,7 +108,7 @@ public final class Renderer implements GraphChangedListener, LayoutRenderListene
         final long now = System.currentTimeMillis();
         if (now - lastPaint > 1000 / MAX_FPS) {
             final PainterBase painter = this.panel.getPainter();
-            synchronized (painter.bufferedImage) {
+            synchronized (painter) {
                 g = painter.getGraphics();
                 painter.clear(g);
                 this.layout.eachEdge(this);
